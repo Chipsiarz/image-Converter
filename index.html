@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="/" enctype="multipart/form-data" method="post">
+        <div class="chooseFile">
+          <input
+            type="file"
+            class="imageInput"
+            accept="image/jpeg"
+            name="file"
+            id="jpegInput"
+          />
+          <label for="jpegInput">Jpeg</label>
+        </div>
+        <div class="convertBtm">
+          <input
+            type="image"
+            src="Sources/submitIcon.png"
+            style="height: 60px; width: 60px"
+          />
+        </div>
+        <div class="chooseFile">
+          <input
+            type="file"
+            class="imageInput"
+            accept="image/png"
+            name="file"
+            id="pngInput"
+          />
+          <label for="pngInput">Png</label>
+        </div>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
