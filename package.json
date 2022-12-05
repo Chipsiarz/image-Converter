@@ -1,0 +1,24 @@
+{
+  "name": "image-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chipsiarz/image-Converter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chipsiarz/image-Converter/issues"
+  },
+  "homepage": "https://github.com/Chipsiarz/image-Converter#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "jimp": "^0.16.2"
+  }
+}

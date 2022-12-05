@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="public.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <form action="/" enctype="multipart/form-data" method="post">
+      <form
+        action="http://localhost:8080/"
+        enctype="multipart/form-data"
+        method="post"
+      >
         <div class="chooseFile">
           <input
             type="file"
@@ -39,6 +44,5 @@
         </div>
       </form>
     </div>
-    <script src="index.js"></script>
   </body>
 </html>
