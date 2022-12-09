@@ -20,32 +20,30 @@ app.post("/", (req, res) => {
       if (err) {
         res.send(err);
       } else {
-        Jimp.read(`Uploads/${fileName}`)
-          .then((image) => {
-            if (fileName.match(/\.(jpg|jpeg)$/i)) {
-              return image.write(
+        Jimp.read(`Uploads/${fileName}`).then((image) => {
+          if (fileName.match(/\.(jpg|jpeg)$/i)) {
+            (async () => {
+              await image.writeAsync(
                 `Uploads/${fileName
                   .replace(/\.jpg$/, ".png")
-                  .replace(/\.jpeg$/, ".png")}`,
-
-                res.download(
-                  `Uploads/${fileName
-                    .replace(/\.jpg$/, ".png")
-                    .replace(/\.jpeg$/, ".png")}`
-                )
+                  .replace(/\.jpeg$/, ".png")}`
               );
-            } else
-              return image.write(
-                `Uploads/${fileName.replace(/\.png$/, ".jpeg")}`,
-
-                res.download(`Uploads/${fileName.replace(/\.png$/, ".jpeg")}`)
+              await res.download(
+                `Uploads/${fileName
+                  .replace(/\.jpg$/, ".png")
+                  .replace(/\.jpeg$/, ".png")}`
               );
-          })
-          .catch((err) => {
-            console.error(err);
-          });
-
-        // res.send("File Uploaded");
+            })();
+          } else
+            (async () => {
+              await image.writeAsync(
+                `Uploads/${fileName.replace(/\.png$/, ".jpeg")}`
+              );
+              await res.download(
+                `Uploads/${fileName.replace(/\.png$/, ".jpeg")}`
+              );
+            })();
+        });
       }
     });
   }
