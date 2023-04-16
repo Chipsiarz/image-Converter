@@ -14,3 +14,7 @@ inputPng.addEventListener("change", () => {
   pngName.textContent = inputPng.value;
   jpegName.textContent = inputJpeg.value;
 });
+
+alert(
+  "Node.js is required for the converter to work. Go to https://github.com/Chipsiarz/image-Converter, and follow README.txt"
+);
