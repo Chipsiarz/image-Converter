@@ -95,9 +95,29 @@ button {
   width: 100%;
   height: 100%;
 }
+
 .video-bg video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 98%;
+  }
+
+  .chooseFile {
+    margin: 5px;
+    height: 40%;
+  }
+
+  label p {
+    font-size: 0.1em;
+  }
+
+  .back-to-portfolio {
+    top: 15%;
+  }
 }
